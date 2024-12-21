@@ -2,26 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #059669
+}  
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+body, input, textarea, button {
+  font: 400, 1rem;
+}
+
+::-webkit-scrollbar {
+  width: 6px; 
+  margin-left: 8px;
+  background-color: #FFFFFF;
+  height: 42px;
+  border-radius: 5px
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #059669; 
+  border-radius: 5px; 
 }
